@@ -91,7 +91,7 @@ class UARAttention(nn.Module):
                 me = gates.mean(dim=0)
                 ce = mask.float().mean(dim=0)
                 l_aux = torch.mean(me * ce) * num_experts * num_experts
-                BMoHAttention.LOAD_BALANCING_LOSSES.append(l_aux)
+                UARAttention.LOAD_BALANCING_LOSSES.append(l_aux)
 
             routed_head_gates = gates * mask
             denom_s = torch.sum(routed_head_gates, dim=1, keepdim=True)
