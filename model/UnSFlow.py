@@ -14,8 +14,8 @@ from timm.layers import DropPath
 from utils import *
 
 
-from .block.BHTN import HTemporalNet
-from .block.UAAHTN import BMoHAttention
+from .block.DUGN import DUGNet
+from .block.UARA import UARAttention
 
 ###############
 class UnSFlow(nn.Module):
